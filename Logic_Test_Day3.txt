@@ -1,0 +1,152 @@
+package day3LogicTest;
+
+import java.util.Scanner;
+
+//Q.1) Find factorial of a number using Recursive function
+
+public class FactorialUsingRecursive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc= new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		
+		int result=fact(n);
+		System.out.println("Factorial of "+n+" is: "+result);
+
+	}
+	
+	
+	public static int fact(int n) {
+		
+		int f;
+		
+		if(n==0 || n==1) { 
+			return 1;
+		}
+		else {
+			f= n*fact(n-1);
+		}
+		return f;
+		
+	}
+
+}
+
+
+
+package day3LogicTest;
+
+public class Pattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Q.3) Solve following pattern 
+
+		//   *** 
+		//   ** 
+		//   * 
+
+		for(int i=3; i>=1; i--) {
+			for(int j=i; j>=1; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+		//   3 
+	//  323 
+	// 32123 
+	//  323 
+	//   3 
+		
+		
+	int n = 3;
+        for (int i = 1; i <= n; i++) {
+         
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+
+            for (int j = n; j >= n - i + 1; j--) {
+                System.out.print(j);
+            }
+            
+            for (int j = n - i + 2; j <= n; j++) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+      
+        for (int i = n - 1; i >= 1; i--) {
+          
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+
+           
+            for (int j = n; j >= n - i + 1; j--) {
+                System.out.print(j);
+            }
+
+            
+            for (int j = n - i + 2; j <= n; j++) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+	}
+
+}
+
+package day3LogicTest;
+
+public class Pattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Q.3) Solve following pattern 
+
+		//   *** 
+		//   ** 
+		//   * 
+		for(int i=3; i>=1; i--) {
+			for(int j=i; j>=1; j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+
+package day3LogicTest;
+
+import java.util.Scanner;
+
+public class binaryInReverseOrder {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Q.4) Print  binary of a number in reverse order  eg. Input 4 O/P 0 0 1 
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		while (n > 0) {
+            System.out.print((n % 2) + " ");
+            n = n / 2;
+        }
+		
+	}
+
+}
+
