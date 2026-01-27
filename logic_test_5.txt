@@ -1,0 +1,101 @@
+package Logic_Test_5;
+
+public class Que1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		Q.1) Store 2 string in an array eg. [“Car”, “Truck”,] 
+//				Write a statement having words Car and Truck. Count occurrence of Car 
+//				and Truck in given paragraph.   
+//				Eg. Input  
+//				I have 2 Car one is Baleno Car and other is Farari Car but Truck is used for 
+//				transportation. 
+//				Car occurred 3 time Truck Occurred 1 time 
+		
+		String arr [] = {"Car", "Truck"};
+		
+		String input = "I have 2 Car one is Baleno Car and other is Farari Car but Truck is used for "
+				+ "transportation";
+		
+		for(String word : arr) {
+			
+			int index = 0;
+			int count=0;
+			
+			while ((index = input.indexOf(word, index)) != -1) {
+			    count++;
+			    index += word.length();
+			}
+				
+			System.out.println(word +" occurred "+count+" times");
+		}
+			
+
+	}
+
+}
+
+
+package Logic_Test_5;
+
+public class Que2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+//		Q.2) Accept a sentence , accept a word and count occurrence of that word. 
+//	Input: Wel come to  CDAC it offers DAC in All CDAC centre. 
+//	Input DAC 
+//	O/P DAC occurred 3 time 
+		
+		String sentence = "Wel come to  CDAC it offers DAC in All CDAC centre.";
+		sentence = sentence.toLowerCase();
+		String input = "DAC";
+		input = input.toLowerCase();
+		
+		int count =0;
+		int index =0;
+		
+		while((index = sentence.indexOf(input, index)) != -1) {
+			count++;
+			index= index+input.length();
+		}
+		
+		System.out.println(input+" occured "+count+" times");
+	}
+
+}
+
+package Logic_Test_5;
+
+import day3.arraydemo;
+
+public class Que3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+//		Q.3) Accept a name from user and check if it is palindrome or not 
+		
+		String name = "namai";
+		char ch [] = name.toCharArray();
+		int l = name.length();
+		
+		boolean flag = true;
+		for(int i=0; i<name.length()/2; i++) {
+			if(ch[i] != ch[l-1-i]) {
+				System.out.println("Given string is not a palindrome");
+				flag = false;
+			}
+		}
+		
+		if(flag==true) {
+			System.out.println("Palindrome");
+		}
+		
+
+	}
+
+}
+
